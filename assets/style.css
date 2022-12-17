@@ -193,7 +193,7 @@ section.flexbox {
 }
 
 .proj_ {
-    background: url(/images/nasa.jpg) no-repeat center / cover;
+    background: url(images/nasa.jpg) no-repeat center / cover;
     flex-basis: 30%;
     height: 300px;
     margin: 5px;
