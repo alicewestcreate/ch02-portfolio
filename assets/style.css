@@ -133,7 +133,7 @@ header section.container {
     width: 60%;
     height: 600px;
     /* border: 3px solid white; */
-    background:url(/assets/images/space.jpg) no-repeat center / cover;
+    background:url(images/space.jpg) no-repeat center / cover;
 
 }
 
@@ -193,7 +193,7 @@ section.flexbox {
 }
 
 .proj_ {
-    background: url(/assets/images/nasa.jpg) no-repeat center / cover;
+    background: url(/images/nasa.jpg) no-repeat center / cover;
     flex-basis: 30%;
     height: 300px;
     margin: 5px;
