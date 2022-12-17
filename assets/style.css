@@ -57,6 +57,27 @@ h1, h2 {
 }
 
 
+.footer-list {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    padding: 6rem 3rem;
+}
+
+.footer-item {
+    list-style: none;
+    margin-right: 2rem;
+    text-decoration: none;
+
+}
+
+.footer-item a {
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:.1rem .5rem;
+    color: var(--white);
+}
+
 
 
 
@@ -123,23 +144,26 @@ header section.container {
 }
 
 
-
-/* Styling for My Work Section */
-
+/* Styling for the main - body */
 
 main {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding-top:10%;
+    padding-top:;
     background-color: var(--white);
 }
 
-.title_section{
+
+/* Styling for My Work, My About HEADER Section */
+
+
+.title_section, .about-section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 10rem 0;
     /* border: 1px solid black; */
 }
 
@@ -152,6 +176,10 @@ section h2 {
 section p {
     width:30%;
 }
+
+
+
+/* Styling for My Work GRID Section */
 
 section.flexbox {
     display: flex;
@@ -198,6 +226,7 @@ section.flexbox {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 70vh;
     }
 
     .right {
@@ -210,6 +239,11 @@ section.flexbox {
         margin-top: -150px;
         
     }
+
+    .text_content h1 {
+        font-size:5rem;
+    }
+
 
     .text_content p {
         background-color: transparent;
