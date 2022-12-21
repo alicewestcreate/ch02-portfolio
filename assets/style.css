@@ -1,8 +1,12 @@
+/* ------------------ ROOT/BODY STYLING ------------------ */
+
 :root {
     --dark:#152238;
     --white:#f1f1f1;
     --pink:#FFE7F7;
 }
+
+html,body   { box-sizing:border-box; padding:0; overflow-x: hidden; margin:0; scroll-behavior:smooth;}
 
 * {
     margin: 0;
@@ -13,9 +17,14 @@ body {
     width: auto;
 }
 
+
+/* ------------------ FONT TYPE & SIZE STYLING ------------------ */
+
 h1, h2 {
     font-family: 'Anton', sans-serif;
 }
+
+/* ------------------ NAVIGATION STYLING ------------------ */
 
 .nav-list {
     background-color: var(--dark);
@@ -33,6 +42,15 @@ h1, h2 {
 
 }
 
+
+.nav-item:first-child {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.2rem;
+    margin-right: auto;
+    margin-left:1rem;
+}
+
+
 .nav-item a {
     text-decoration: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -48,14 +66,7 @@ h1, h2 {
 
 }
 
-
-.nav-item:first-child {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.2rem;
-    margin-right: auto;
-    margin-left:1rem;
-}
-
+/* ------------------ FOOTER STYLING ------------------ */
 
 .footer-list {
     display: flex;
@@ -82,29 +93,8 @@ h1, h2 {
 
 
 
+/* ------------------ HEADER STYLING ------------------ */
 
-
-
-
-
-
-/* Styling for the header */
-
-header h1 {
-    font-size: 7em;
-    line-height: 105%;
-    color: var(--white);
-}
-
-.text_content p {
-    background-color: var(--pink);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-    color: var(--dark);
-    padding: 1em;
-    margin: 30px 0px;
-    width: fit-content;
-}
 
 header {
     min-width: 100vw;
@@ -123,28 +113,46 @@ header section.container {
     margin: 40px auto;
     /* border: 3px solid white; */
     width: 90%;
-    max-width: 1000%;
+    max-width: 1000px;
 
 }
 
-/* Styling for the hero/header image on the back */
 
 .right {
-    width: 60%;
-    height: 600px;
+    flex-basis: 60%;
+    height: 70vh;
     /* border: 3px solid white; */
     background:url(images/space.jpg) no-repeat center / cover;
 
 }
 
 .left{
-    width: 40%;
+    flex-basis:40%;
     /* border: 2px solid white; */
-    margin-left: -200px;
+    margin-right: -200px;
+    z-index: 3;
 }
 
 
-/* Styling for the main - body */
+header h1 {
+    font-size: 7em;
+    line-height: 105%;
+    color: var(--white);
+}
+
+.text_content p {
+    background-color: var(--pink);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: var(--dark);
+    padding: 1em;
+    margin: 30px 0px;
+    width: fit-content;
+}
+
+
+/* ------------------ MAIN STYLING ------------------ */
+/* -------------------------------------------------- */
 
 main {
     display: flex;
@@ -156,30 +164,36 @@ main {
 }
 
 
-/* Styling for My Work, My About HEADER Section */
+/* ------------------ TITLE SECTIONS STYLING ------------------ */
 
 
 .title_section, .about-section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 10rem 0;
+    padding: 5vw;
     /* border: 1px solid black; */
 }
 
 section h2 {
+    padding: 5%;
     font-size: 5em;
     color: var(--dark);
     line-height: 95%;
+    flex-basis: 40%;
+
+    
 }
 
 section p {
-    width:30%;
+    padding: 5%;
+    flex-basis: 40%;
+
 }
 
 
 
-/* Styling for My Work GRID Section */
+/* ------------------ MY WORK/ GRID STYLING ------------------ */
 
 section.flexbox {
     display: flex;
@@ -218,32 +232,72 @@ section.flexbox {
 }
 
 
+/* ------------------ MEDIA QUERY STYLING ------------------ */
+/* -------------------------------------------------- */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
 
+
+
+    
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        padding: 10% 0;
+    }
+    
+    
+    .nav-item {
+        list-style: none;
+        margin-right: 0;
+        margin: 5px;
+        text-decoration: none;
+    
+    }   
+    
+    .nav-item:first-child {
+        margin-right: 0;
+      
+    }
+    
+    
+    
     header section.container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
         width: 100%;
         height: 70vh;
     }
+    
+
+    .left {    
+        /* border: 2px solid white;  */
+        width: 75vw;
+        order: 2;
+        margin-right:0;
+        margin-top: -25vh;
+        z-index: 1;
+    }
+
 
     .right {
-        width: 100%;
+        width: 100vw;
+        /* flex-basis: 80%; - why does this not work */
+        height: 40vh;
+        /* border: 3px solid white; */
+        background:url(images/space.jpg) no-repeat center / cover;
+    
     }
-
-    .left {
-        width: 65%;
-        margin:0;
-        margin-top: -150px;
-        
-    }
-
+    
+  
     .text_content h1 {
-        font-size:5rem;
+        font-size:4rem;
     }
-
 
     .text_content p {
         background-color: transparent;
@@ -253,6 +307,7 @@ section.flexbox {
         padding: 1em 0;
         margin: 0;
     }
+
 
 
     section.flexbox {
@@ -265,5 +320,36 @@ section.flexbox {
         margin: 5px 0;
     
     } 
+    
+}
+
+@media only screen and (max-width: 765px) {
+
+    .main {
+        
+    }
+
+    .title_section, .about-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        padding: 10vh 0;
+        /* border: 1px solid black; */
+    }
+    
+    section h2 {
+        flex-basis: 20%;
+        color: palevioletred;
+
+
+    }
+    
+    section p  {
+        flex-basis: 20%;
+
+    }
+
     
 }
