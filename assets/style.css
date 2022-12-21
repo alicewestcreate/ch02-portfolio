@@ -17,6 +17,7 @@ body {
     width: auto;
 }
 
+a {text-decoration: none;}
 
 /* ------------------ FONT TYPE & SIZE STYLING ------------------ */
 
@@ -159,7 +160,6 @@ main {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding-top:;
     background-color: var(--white);
 }
 
@@ -199,8 +199,8 @@ section.flexbox {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    flex-basis: 80%;
+    justify-content: space-evenly;
+    
     margin: 20px;
 
 
@@ -209,20 +209,23 @@ section.flexbox {
 .proj_ {
     background: url(images/nasa.jpg) no-repeat center / cover;
     flex-basis: 30%;
+    margin: 10px 0;
     height: 300px;
-    margin: 5px;
     display: flex;
-    flex-wrap: wrap;
+
 
 } 
 
+.proj_:first-child{
+    flex-basis: 95%;
+}
+
+.flex-item {
+    display: flex;
+}
+
 .title_container {
     background-color: rgba(255, 255, 255, .5);
-    flex-basis: 60%;    /* Flex basis seems to have no/wrong effect. Also center, doesnt seem to centering  */
-    height: 150px;
-    width: 150px;
-    padding: 50%;
-
 
 }
 
@@ -237,9 +240,6 @@ section.flexbox {
 
 
 @media only screen and (max-width: 576px) {
-
-
-
     
     .nav-list{
         display: flex;
@@ -261,7 +261,6 @@ section.flexbox {
         margin-right: 0;
       
     }
-    
     
     
     header section.container {
@@ -318,38 +317,35 @@ section.flexbox {
         flex-basis: 100%;
         height: 300px;
         margin: 5px 0;
-    
     } 
+
+    .proj_:first-child{
+        flex-basis: 100%;
+    }
     
 }
 
 @media only screen and (max-width: 765px) {
 
-    .main {
+    section h2 {
+        font-size: 3rem;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
     }
 
     .title_section, .about-section{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 80vw;
         padding: 10vh 0;
-        /* border: 1px solid black; */
-    }
-    
-    section h2 {
-        flex-basis: 20%;
-        color: palevioletred;
-
 
     }
-    
-    section p  {
-        flex-basis: 20%;
 
-    }
 
     
 }
