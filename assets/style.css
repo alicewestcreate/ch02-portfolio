@@ -222,16 +222,25 @@ section.flexbox {
 
 .flex-item {
     display: flex;
+    width: auto;
+    align-items: center;
+  
+    
 }
 
 .title_container {
+
     background-color: rgba(255, 255, 255, .5);
+    padding: 10%  20%;
+    
+
 
 }
 
 .title_container h3, p {
     color: var(--dark);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: fit-content;
 }
 
 
@@ -261,6 +270,8 @@ section.flexbox {
         margin-right: 0;
       
     }
+
+    
     
     
     header section.container {
@@ -315,12 +326,24 @@ section.flexbox {
     }
     .proj_ {
         flex-basis: 100%;
-        height: 300px;
+        height: 200px;
         margin: 5px 0;
     } 
 
     .proj_:first-child{
         flex-basis: 100%;
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    li.footer-item {
+        align-items: center;
+        
     }
     
 }
