@@ -243,6 +243,12 @@ section.flexbox {
     width: fit-content;
 }
 
+/* ------------------ Project Page STYLING ------------------ */
+
+.hero.proj_ {
+    height: 60vh;
+}
+
 
 /* ------------------ MEDIA QUERY STYLING ------------------ */
 /* -------------------------------------------------- */
